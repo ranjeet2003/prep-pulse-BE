@@ -13,7 +13,7 @@ const cors = require("cors");
 const app = express();
 // Middleware
 const corsOptions = {
-  origin: "http://localhost:3000", // Replace with your frontend URL
+  origin: "https://prep-pulse-fe.vercel.app", // Replace with your frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
