@@ -55,7 +55,7 @@ const getTotalTestsByUser = async (req, res, next) => {
 
 const getTotalTestsByUserData = async (req, res, next) => {
   try {
-    const { userId } = req.params;
+    const { userId } = req.body;
 
     const testCount = await Test.find({ userId });
 
