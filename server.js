@@ -13,10 +13,11 @@ const cors = require("cors");
 const app = express();
 // Middleware
 const corsOptions = {
-  origin: "https://prep-pulse-fe.vercel.app", // Replace with your frontend URL
+  origin: ["https://prep-pulse-fe.vercel.app", "http://localhost:3000"], // List your allowed origins here
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
+
 app.use(cors(corsOptions));
 app.use(express.json()); // Parse JSON bodies
 
