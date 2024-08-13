@@ -71,7 +71,7 @@ const getTestsDataByChapterId = async (req, res, next) => {
 
     const testData = await Test.find({ chapter });
 
-    res.status(httpStatus.OK).send({ chapterId, testData });
+    res.status(httpStatus.OK).send({ chapter, testData });
   } catch (error) {
     next(error);
   }
