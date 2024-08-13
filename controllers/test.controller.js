@@ -65,8 +65,21 @@ const getTotalTestsByUserData = async (req, res, next) => {
   }
 };
 
+const getTestsByChapterId = async (req, res, next) => {
+  try {
+    const { chapterId } = req.body;
+
+    const testData = await Test.find({ chapterId });
+
+    res.status(httpStatus.OK).send({ chapterId, testData });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   addTest,
   getTotalTestsByUser, // Export the new method
   getTotalTestsByUserData,
+  getTestsByChapterId,
 };
