@@ -29,6 +29,14 @@ const testSchema = mongoose.Schema(
       ref: "User", // Assuming you have a User model
       required: true,
     },
+    chapterName: {
+      type: String,
+      required: true,
+    },
+    subjectName: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

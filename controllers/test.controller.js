@@ -11,6 +11,8 @@ const addTest = async (req, res, next) => {
       attempted_questions,
       corrected_questions,
       userId,
+      chapterName,
+      subjectName,
     } = req.body;
 
     const chapter = await Chapter.findById(chapterId);
@@ -28,6 +30,8 @@ const addTest = async (req, res, next) => {
       corrected_questions,
       chapter: chapter._id,
       userId,
+      chapterName,
+      subjectName
     });
 
     await test.save();
